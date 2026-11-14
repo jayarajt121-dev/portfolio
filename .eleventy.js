@@ -1,5 +1,10 @@
 // .eleventy.js
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function(eleventyConfig) {
+  // Automatically transforms URLs to include pathPrefix on GitHub Pages
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // Collection for case studies
   eleventyConfig.addCollection("caseStudies", function(collection) {
     return collection.getFilteredByGlob("src/case-studies/*.md").sort((a, b) => {
@@ -7,9 +12,10 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Passthrough copy for static data and images
+  // Passthrough copy for static data, images, and .nojekyll
   eleventyConfig.addPassthroughCopy({ "src/data": "data" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
+  eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
 
   // Date filter for Nunjucks templates
   eleventyConfig.addFilter("date", function(dateVal, format) {
@@ -37,6 +43,7 @@ module.exports = function(eleventyConfig) {
       data: "_data",
       output: "dist"
     },
+    pathPrefix: "/portfolio/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"

@@ -266,7 +266,13 @@ function kpiWidgetTracker() {
     chartsLoaded: false,
     async init() {
       try {
-        const res = await fetch('/data/kpis.json');
+        let res;
+        try {
+          res = await fetch('/portfolio/data/kpis.json');
+          if (!res.ok) throw new Error();
+        } catch (_) {
+          res = await fetch('/data/kpis.json');
+        }
         this.widgets = await res.json();
         
         // Initialize counter states at 0
