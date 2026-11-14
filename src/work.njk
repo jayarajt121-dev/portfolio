@@ -1,82 +1,105 @@
 ---
 layout: base.njk
-title: Selected Client Work
+title: Selected Work & Client Engagements
 permalink: /work/
 ---
-<div class="py-8">
+<div class="py-8 md:py-16 reveal-on-scroll">
   <div class="max-w-3xl mb-12">
-    <span class="text-accent text-sm font-semibold uppercase tracking-wider">Portfolio</span>
-    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mt-2 mb-4">Selected Client Work</h1>
-    <p class="text-lg text-gray-300">
-      Key clients and multi-channel campaigns managed across the UAE and global markets spanning e-commerce, commercial safety, and logistics.
+    <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Engagements</span>
+    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Selected Work</h1>
+    <p class="text-lg md:text-xl text-gray-300 font-body leading-relaxed">
+      Commercial client engagements managed across the UAE and global markets spanning e-commerce, commercial safety, enterprise security, and logistics.
     </p>
   </div>
 
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- 3-Column Grid on >=1200px, 2-Column on 768-1199px, 1-Col on Mobile -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% set clients = [
       {
         "name": "Ecomate International LLC",
-        "industry": "E‑commerce & Retail",
         "slug": "ecomate-international-llc",
-        "summary": "Full-funnel SEO overhaul and Google Ads performance management delivering high-intent organic visitors and reduced acquisition costs.",
-        "highlights": "+140% Organic Traffic, -35% CPA",
-        "hasCaseStudy": true
+        "industry": "E-Commerce & Retail",
+        "role": "Technical SEO Audit, Keyword Clustering & Google Ads Restructuring",
+        "logo": "/assets/images/ecomate-logo.svg",
+        "summary": "Comprehensive search engine overhaul addressing crawling bloat, coupled with Google Ads STAG architecture."
       },
       {
         "name": "AITS Safety LLC",
-        "industry": "Commercial Safety Services",
         "slug": "aits-safety-llc",
-        "summary": "Local SEO dominance across UAE industrial hubs combined with hyper-targeted Google Search lead gen campaigns.",
-        "highlights": "+85% Qualified B2B Inquiries",
-        "hasCaseStudy": false
+        "industry": "Safety Services",
+        "role": "Local SEO Dominance & High-Intent Commercial Search Ads",
+        "logo": "/assets/images/aits-safety-logo.svg",
+        "summary": "Targeting commercial and industrial safety inquiries across Dubai and Abu Dhabi with localized landing page funnels."
       },
       {
         "name": "Starline Security LLC",
-        "industry": "Security Services & CCTV",
         "slug": "starline-security-llc",
-        "summary": "Search intent optimization for high-ticket commercial installations, optimizing landing page conversion rate.",
-        "highlights": "+60% Conversion Rate on Landing Pages",
-        "hasCaseStudy": false
+        "industry": "Security Services",
+        "role": "Commercial Search Campaigns & Landing Page CRO",
+        "logo": "/assets/images/starline-security-logo.svg",
+        "summary": "Capturing high-ticket commercial CCTV and access control inquiries with optimized lead qualification funnels."
       },
       {
         "name": "Digitz Technologies LLC",
-        "industry": "Digital Tech Agency (UAE)",
         "slug": "digitz-technologies-llc",
-        "summary": "Internal digital marketing operations, client acquisition pipelines, and automated performance tracking across agency accounts.",
-        "highlights": "End-to-End Analytics & Tracking Infrastructure",
-        "hasCaseStudy": false
+        "industry": "Digital Agency (UAE)",
+        "role": "Agency Campaign Management & Full-Funnel Attribution Infrastructure",
+        "logo": "/assets/images/digitz-technologies-logo.svg",
+        "summary": "Multi-account paid media execution, GA4 custom event tracking, and Looker Studio client reporting."
       },
       {
         "name": "DMX Global Logistics",
-        "industry": "Global Freight & Logistics",
         "slug": "dmx-global-logistics",
-        "summary": "International keyword research and B2B freight forwarding search campaigns targeting regional trade corridors.",
-        "highlights": "Targeted Lead Gen Across Middle East & Asia",
-        "hasCaseStudy": false
+        "industry": "Freight & Logistics",
+        "role": "International Keyword Strategy & Freight Forwarding Search",
+        "logo": "/assets/images/dmx-logistics-logo.svg",
+        "summary": "Cross-border search intent targeting for regional freight corridors across the Middle East and Asia."
       }
     ] %}
 
-    {% for c in clients %}
-      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:border-accent/40 transition">
+    {% for client in clients %}
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-7 overflow-hidden flex flex-col justify-between group">
         <div>
-          <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent mb-3">
-            {{ c.industry }}
+          <!-- Logo Container -->
+          <div class="h-16 flex items-center mb-5">
+            <img 
+              src="{{ client.logo }}" 
+              alt="{{ client.name }} Logo" 
+              class="max-h-12 max-w-full object-contain" 
+              loading="lazy" 
+              width="200" 
+              height="50"
+            />
+          </div>
+
+          <span class="inline-block px-2.5 py-1 text-xs font-semibold rounded bg-accent/10 text-accent mb-3">
+            {{ client.industry }}
           </span>
-          <h2 class="text-xl font-heading font-bold text-white mb-2">{{ c.name }}</h2>
-          <p class="text-sm text-gray-300 mb-4 leading-relaxed">{{ c.summary }}</p>
+
+          <h2 class="font-heading font-bold text-xl text-white mb-2">{{ client.name }}</h2>
+          <p class="text-xs text-gray-400 leading-relaxed mb-4">{{ client.summary }}</p>
         </div>
 
-        <div class="pt-4 border-t border-white/10">
-          <div class="text-xs text-accent-light font-semibold mb-3">
-            Impact: {{ c.highlights }}
+        <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+          <a href="/case-studies/{{ client.slug }}/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1.5 touch-target">
+            Read Full Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Verified Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + brief role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-7 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">{{ client.industry }}</span>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">{{ client.name }}</h3>
+            <div class="border-t border-white/10 pt-3">
+              <span class="text-xs text-gray-400 block font-mono mb-1">Role & Execution:</span>
+              <p class="text-xs text-gray-200 leading-relaxed">{{ client.role }}</p>
+            </div>
           </div>
-          {% if c.hasCaseStudy %}
-            <a href="/case-studies/{{ c.slug }}/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-light transition">
-              Read Deep-Dive Case Study &rarr;
-            </a>
-          {% else %}
-            <span class="text-xs text-gray-500">Case study writeup in progress</span>
-          {% endif %}
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click to view challenge, approach & results &rarr;
+          </div>
         </div>
       </div>
     {% endfor %}

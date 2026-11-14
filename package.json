@@ -4,9 +4,9 @@
   "description": "Personal portfolio for Jayaraj T – Digital Marketer",
   "scripts": {
     "dev": "eleventy --serve",
+    "build": "eleventy",
     "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/style.css --minify",
-    "build": "eleventy && npm run build:css",
-    "watch:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/style.css --watch"
+    "postinstall": "npm run build && npm run build:css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",

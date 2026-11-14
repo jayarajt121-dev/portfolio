@@ -3,9 +3,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom utilities */
 @layer utilities {
-  .bg-primary { background-color: theme('colors.background'); }
-  .text-accent { color: theme('colors.accent'); }
-  .border-accent { border-color: theme('colors.accent'); }
+  .bg-primary {
+    background-color: #191919;
+  }
+  .text-accent {
+    color: #0FA9E6;
+  }
+  .text-accent-light {
+    color: #7FD6FF;
+  }
+  .text-accent-soft {
+    color: #5ED9D1;
+  }
+  .border-accent {
+    border-color: #0FA9E6;
+  }
+  .border-accent-light {
+    border-color: #7FD6FF;
+  }
+  .border-accent-soft {
+    border-color: #5ED9D1;
+  }
+}
+
+/* Hero entrance animation: Tagline slides up 30px and fades-in (0.8s) on page load */
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero {
+  animation: heroSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Section scroll reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project Tile interactions: 1.02x scale, darken background, fade-in overlay */
+.project-tile {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+}
+
+.project-tile:hover {
+  transform: scale(1.02);
+  background-color: #141414;
+}
+
+.project-tile .tile-overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.project-tile:hover .tile-overlay {
+  opacity: 1;
+}
+
+/* Touch targets must be >= 44px for accessibility */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
 }

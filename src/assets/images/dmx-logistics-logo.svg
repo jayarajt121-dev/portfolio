@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none" class="w-full h-auto">
+  <rect width="320" height="100" rx="12" fill="#1E1E1E"/>
+  <path d="M34 50 H66 M56 40 L66 50 L56 60" stroke="#0FA9E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="84" y="47" font-family="'Inter', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF" letter-spacing="0.5">DMX GLOBAL</text>
+  <text x="84" y="65" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#7FD6FF" letter-spacing="1.5">LOGISTICS</text>
+</svg>

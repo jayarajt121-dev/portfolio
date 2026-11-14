@@ -1,97 +1,134 @@
 ---
-title: Ecomate International LLC – SEO & Paid Media Transformation
-excerpt: Comprehensive e-commerce SEO audit, technical optimization, keyword clustering, and Google Ads restructuring that boosted organic traffic by 140% and improved lead quality.
+title: Ecomate International LLC – E-Commerce SEO & Paid Search
+excerpt: Technical crawl audit, category keyword clustering, and Single-Theme Ad Group restructuring for a UAE e-commerce retailer.
 layout: base.njk
 permalink: /case-studies/ecomate-international-llc/
+order: 1
 ---
-<article class="max-w-4xl mx-auto py-8">
+<article class="max-w-4xl mx-auto py-8 md:py-16 reveal-on-scroll">
   <div class="mb-10 pb-8 border-b border-white/10">
-    <a href="/case-studies/" class="text-accent text-sm font-semibold hover:underline inline-flex items-center gap-1 mb-4">
+    <a href="/case-studies/" class="text-accent text-xs font-semibold hover:underline inline-flex items-center gap-1.5 mb-4 touch-target">
       &larr; Back to Case Studies
     </a>
-    <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-2">E-Commerce & Retail • UAE</span>
-    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
-      Ecomate International LLC: Scaling Organic Traffic & Paid Media Efficiency
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-xs font-semibold px-2.5 py-1 rounded bg-accent/10 text-accent font-mono uppercase">E-Commerce & Retail</span>
+      <span class="text-xs text-gray-500 font-mono">UAE Market</span>
+    </div>
+    <h1 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+      Ecomate International LLC: Technical Search Engine Optimization & Search Advertising
     </h1>
-    <p class="text-xl text-gray-300 leading-relaxed">
-      How a technical search engine overhaul and restructured paid search campaigns generated a 140% boost in organic sessions and a 35% reduction in CPA.
+    <p class="text-lg md:text-xl text-gray-300 font-body leading-relaxed">
+      Resolving crawling bottlenecks, optimizing Core Web Vitals, and restructuring broad Google Ads campaigns to capture commercial search demand.
     </p>
   </div>
 
-  <!-- Key Results Callouts -->
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 text-center">
-      <div class="text-3xl md:text-4xl font-bold text-accent mb-1">+140%</div>
-      <div class="text-xs text-gray-400 uppercase tracking-wide">Organic Search Traffic</div>
-    </div>
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 text-center">
-      <div class="text-3xl md:text-4xl font-bold text-accent mb-1">-35%</div>
-      <div class="text-xs text-gray-400 uppercase tracking-wide">Cost Per Acquisition (CPA)</div>
-    </div>
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 text-center">
-      <div class="text-3xl md:text-4xl font-bold text-accent mb-1">3.4x</div>
-      <div class="text-xs text-gray-400 uppercase tracking-wide">Return on Ad Spend (ROAS)</div>
-    </div>
-  </div>
-
-  <div class="space-y-10 text-gray-300 text-base leading-relaxed">
+  <div class="space-y-12 text-gray-300 leading-relaxed font-body">
+    <!-- Challenge Section -->
     <section>
-      <h2 class="text-2xl font-heading font-bold text-white mb-3">1. The Challenge</h2>
-      <p>
-        Ecomate International LLC faced stagnating organic search rankings and an escalating Cost Per Click (CPC) across their paid search channels in the competitive UAE market. Key bottlenecks identified included:
-      </p>
-      <ul class="list-disc list-inside mt-3 space-y-2 text-gray-300">
-        <li><strong>Crawling & Indexation Pitfalls:</strong> Excessive faceted navigation creating duplicate URL parameters without proper canonicalization.</li>
-        <li><strong>Suboptimal Core Web Vitals:</strong> Heavy uncompressed scripts and slow server response times causing high mobile bounce rates (>68%).</li>
-        <li><strong>Broad-Match Ad Waste:</strong> Paid campaigns were leaking budget onto low-intent query terms without strict negative keyword pruning.</li>
-      </ul>
+      <h2 class="font-heading text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-accent text-lg font-mono">01.</span> Challenge
+      </h2>
+      <div class="p-6 rounded-xl border border-white/10 bg-[#161616] space-y-4">
+        <p>
+          Ecomate International LLC required an overhaul of their organic search visibility and efficiency across paid search channels in the UAE. The primary technical and strategic challenges included:
+        </p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span><strong>Faceted Indexation Bloat:</strong> E-commerce product filter variations generated thousands of parameterized URLs without canonical controls, exhausting search crawler budgets.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span><strong>Mobile Page Performance:</strong> Uncompressed assets and unoptimized script execution led to subpar Core Web Vitals (Largest Contentful Paint &gt; 4.0s).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span><strong>Paid Search Query Leakage:</strong> Search ad campaigns relied on broad match terms, capturing low-intent informational queries and diluting budget.</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Approach Section -->
     <section>
-      <h2 class="text-2xl font-heading font-bold text-white mb-3">2. The Strategy & Tactical Execution</h2>
+      <h2 class="font-heading text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-accent text-lg font-mono">02.</span> Approach
+      </h2>
       <div class="space-y-4">
-        <div class="p-5 bg-white/5 border border-white/10 rounded-xl">
-          <h3 class="font-bold text-accent mb-2">Phase A: Technical & On-Page SEO Architecture</h3>
-          <p class="text-sm">
-            Cleaned up the indexation bloat by implementing strict <code>robots.txt</code> parameter rules and self-referencing canonicals. Optimized Core Web Vitals by deferring non-critical JavaScript, compressing hero images with WebP formats, and achieving sub-2.2s Largest Contentful Paint (LCP).
+        <div class="p-6 rounded-xl border border-white/10 bg-[#161616]">
+          <h3 class="font-bold text-white text-base mb-2">Technical Indexation & Architecture</h3>
+          <p class="text-sm text-gray-300">
+            Implemented clean self-referencing canonical tags, updated <code>robots.txt</code> parameter disallow rules, and deployed XML sitemaps partitioned by product categories. Resolved 4xx response errors identified through Screaming Frog audits.
           </p>
         </div>
 
-        <div class="p-5 bg-white/5 border border-white/10 rounded-xl">
-          <h3 class="font-bold text-accent mb-2">Phase B: High-Intent Keyword Clustering & AEO</h3>
-          <p class="text-sm">
-            Conducted thorough commercial intent keyword research targeting buyer-ready queries across Dubai and the broader GCC. Structured category and product copy into semantic clusters with FAQ schema for Answer Engine Optimization (AEO).
+        <div class="p-6 rounded-xl border border-white/10 bg-[#161616]">
+          <h3 class="font-bold text-white text-base mb-2">Core Web Vitals Remediation</h3>
+          <p class="text-sm text-gray-300">
+            Compressed product imagery into WebP format, implemented native browser lazy-loading, and deferred non-essential third-party analytics scripts to achieve sub-2.4s LCP.
           </p>
         </div>
 
-        <div class="p-5 bg-white/5 border border-white/10 rounded-xl">
-          <h3 class="font-bold text-accent mb-2">Phase C: Paid Search (Google Ads) Restructuring</h3>
-          <p class="text-sm">
-            Transitioned legacy campaigns into a tight Single-Theme Ad Group (STAG) architecture. Added extensive negative keyword libraries, deployed responsive search ads with dynamic keyword insertion, and configured offline conversion value tracking in Google Ads via GA4 and GTM.
+        <div class="p-6 rounded-xl border border-white/10 bg-[#161616]">
+          <h3 class="font-bold text-white text-base mb-2">Google Ads Campaign Re-architecture</h3>
+          <p class="text-sm text-gray-300">
+            Transitioned ad accounts into Single-Theme Ad Groups (STAGs). Layered robust negative keyword lists (job seekers, free inquiries, competitor brands) to ensure ad spend focused solely on transactional commercial queries.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Results Section -->
     <section>
-      <h2 class="text-2xl font-heading font-bold text-white mb-3">3. Measurable Business Outcomes</h2>
-      <p>
-        Within six months of strategy deployment:
-      </p>
-      <ul class="list-disc list-inside mt-3 space-y-2 text-gray-300">
-        <li>Organic search sessions grew from 1,200 to 2,800+ monthly visits.</li>
-        <li>Quality Score across core commercial search ad groups improved from an average of 5/10 to 8.5/10.</li>
-        <li>Blended return on ad spend (ROAS) climbed to 3.4x, allowing the client to profitably double their monthly ad budget.</li>
-      </ul>
+      <h2 class="font-heading text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-accent text-lg font-mono">03.</span> Results
+      </h2>
+      <div class="p-6 rounded-xl border border-white/10 bg-[#161616] space-y-4">
+        <p>
+          Execution of the technical audit and ad restructuring delivered concrete improvements across key search parameters:
+        </p>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span>Crawl efficiency stabilized with clean indexation of primary commercial product categories in Google Search Console.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span>Average Quality Score across high-volume keyword ad groups improved due to tight alignment between ad copy, keywords, and landing page relevance.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-accent mt-0.5">&bull;</span>
+            <span>Eliminated non-converting search term queries from Google Ads, driving lower average Cost Per Click (CPC) and higher conversion efficiency.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visual Assets Section -->
+    <section>
+      <h2 class="font-heading text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-accent text-lg font-mono">04.</span> Visual Assets & Architecture
+      </h2>
+      <div class="p-6 rounded-xl border border-white/10 bg-[#161616] space-y-4">
+        <div class="rounded-lg border border-white/10 overflow-hidden bg-[#121212] p-6 text-center">
+          <img 
+            src="/assets/images/ecomate-logo.svg" 
+            alt="Ecomate International LLC Logo" 
+            class="max-h-16 mx-auto mb-4" 
+            loading="lazy" 
+          />
+          <div class="text-xs text-accent font-mono">Campaign Architecture: STAG Search Funnels & Crawl Budget Allocation</div>
+        </div>
+      </div>
     </section>
   </div>
 
   <div class="mt-12 pt-8 border-t border-white/10 flex justify-between items-center">
-    <a href="/case-studies/" class="text-sm text-gray-400 hover:text-white transition">
+    <a href="/case-studies/" class="text-xs text-gray-400 hover:text-white transition touch-target">
       &larr; View all case studies
     </a>
-    <a href="/contact/" class="px-5 py-2.5 bg-accent hover:bg-accent-light text-white text-sm font-semibold rounded-lg transition">
-      Discuss Your Project &rarr;
+    <a href="/contact/" class="touch-target px-5 py-2.5 text-xs font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition">
+      Inquire for Similar Project &rarr;
     </a>
   </div>
 </article>

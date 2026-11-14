@@ -1,262 +1,397 @@
 ---
 layout: base.njk
-title: Home
+title: Digital Marketer for High-Growth Brands
 permalink: /
 ---
 <!-- Hero Section -->
-<section class="py-12 md:py-20 flex flex-col items-start gap-6 border-b border-white/10">
-  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-semibold uppercase tracking-wider">
-    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-    Available for High-Impact Freelance & Consulting Engagements
-  </div>
-  
-  <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight max-w-4xl">
-    Driving Measurable Growth Through <span class="text-accent underline decoration-accent/40 decoration-wavy">Data-Backed</span> Digital Marketing.
-  </h1>
+<section class="py-12 md:py-24 border-b border-white/10">
+  <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Left Column: Copy & CTAs -->
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        Digital Marketer &bull; Freelance & Consulting Available
+      </div>
 
-  <div class="space-y-3 max-w-2xl">
-    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-      Hi, I’m <strong class="text-white">Jayaraj T</strong> — a Digital Marketer and performance strategist based in Calicut, Kerala, executing high-ROI campaigns across the UAE for <strong class="text-white">Digitz Technologies</strong>.
-    </p>
-    <p class="text-sm italic text-gray-400 font-heading">
-      &ldquo;Somehow, this is my profession.&rdquo; — Blending computer science rigor with creative, full-funnel performance marketing.
-    </p>
-  </div>
+      <!-- Tagline with 30px slide-up and fade-in (0.8s) -->
+      <h1 class="animate-hero font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+        &ldquo;Somehow, This Is My Profession.&rdquo;
+      </h1>
 
-  <div class="flex flex-wrap items-center gap-4 pt-2">
-    <a href="/case-studies/" class="px-6 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
-      View Case Studies
-    </a>
-    <a href="/contact/" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-200 font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
-      Let's Talk
-    </a>
-  </div>
-</section>
+      <!-- 2-3 Line Analytical Intro -->
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-body max-w-xl">
+        I am a digital marketer based in Calicut, Kerala, currently engineering high-ROI search and paid-media campaigns for UAE clients at <strong class="text-white">Digitz Technologies</strong>. With a background in Computer Science, I translate deep technical architecture and search behavior into measurable customer acquisition.
+      </p>
 
-<!-- KPI Performance Metrics Section -->
-<section class="py-16 border-b border-white/10" x-data="kpiDashboard()">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-    <div>
-      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-1">Interactive Metrics</span>
-      <h2 class="font-heading text-3xl font-bold text-white">Performance Highlights</h2>
-      <p class="text-gray-400 mt-1">Real campaign metrics achieved across client engagements in the UAE.</p>
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <!-- Exact CTA Button -->
+        <a href="#selected-work" class="touch-target px-7 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
+          View My Work
+        </a>
+        <a href="/contact/" class="touch-target px-7 py-3 bg-white/5 hover:bg-white/10 text-gray-200 font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+          Contact for Freelance
+        </a>
+      </div>
     </div>
-    
-    <!-- Chart selector buttons -->
-    <div class="flex flex-wrap gap-2 p-1 bg-white/5 rounded-lg border border-white/10">
-      <template x-for="(kpi, index) in kpis" :key="kpi.id">
-        <button 
-          @click="selectMetric(index)"
-          :class="activeIndex === index ? 'bg-accent text-white shadow-sm' : 'text-gray-400 hover:text-white'"
-          class="px-3.5 py-1.5 rounded-md text-xs font-medium transition-all duration-150"
-          x-text="kpi.title">
-        </button>
-      </template>
-    </div>
-  </div>
 
-  <!-- Metric Stats Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
-      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Qualified B2B Leads</div>
-      <div class="text-3xl font-bold text-white mb-2">+342%</div>
-      <p class="text-sm text-gray-400">Monthly high-intent qualified leads generated through restructured Google Search and intent-matched landing pages.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
-      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Paid Search Efficiency</div>
-      <div class="text-3xl font-bold text-white mb-2">-45%</div>
-      <p class="text-sm text-gray-400">Reduction in average Cost Per Click (CPC) via Quality Score optimization and aggressive negative keyword sculpting.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
-      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Return on Ad Spend</div>
-      <div class="text-3xl font-bold text-white mb-2">4.4x</div>
-      <p class="text-sm text-gray-400">Blended ROAS sustained across client e-commerce and commercial service campaigns in the UAE.</p>
-    </div>
-  </div>
-
-  <!-- Interactive Chart Container -->
-  <div class="p-6 rounded-xl bg-white/5 border border-white/10">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-sm font-semibold text-gray-300" x-text="currentKpi?.title"></h3>
-      <span class="text-xs text-gray-400">Monthly Progression (5-Month Window)</span>
-    </div>
-    <div class="h-72 w-full">
-      <canvas id="kpiChart"></canvas>
+    <!-- Right Column: Visual Portrait Asset with Cool-Blue Overlay -->
+    <div class="lg:col-span-5 relative">
+      <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden border border-white/10 bg-[#161616]">
+        <img 
+          src="/assets/images/headshot.svg" 
+          alt="Jayaraj T – Digital Marketer" 
+          class="w-full h-auto object-cover" 
+          width="500" 
+          height="500" 
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-[#0FA9E6]/10 mix-blend-overlay pointer-events-none"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Core Services / Expertise -->
-<section class="py-16 border-b border-white/10">
-  <div class="flex justify-between items-end mb-10">
+<!-- KPI Widgets Section -->
+<section id="kpi-widgets" class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll" x-data="kpiWidgetTracker()">
+  <div class="max-w-3xl mb-12">
+    <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Verified Engagement Data</span>
+    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Key Performance Indicators</h2>
+    <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+      Real campaign benchmarks across Search and Performance marketing accounts managed in the UAE.
+    </p>
+  </div>
+
+  <!-- 3 KPI Widgets Grid: Stacked on mobile & 768-1199px, 3-column on desktop (>=1200px) -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <template x-for="(widget, idx) in widgets" :key="widget.id">
+      <div class="p-6 rounded-xl border border-white/10 bg-[#171717] flex flex-col justify-between">
+        <div>
+          <!-- Title -->
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xs font-semibold text-accent uppercase tracking-wider" x-text="widget.title"></h3>
+            <span class="text-xs text-gray-500 font-mono">5-Mo Trend</span>
+          </div>
+
+          <!-- Animated Counter: Counts from 0 -> Target when in view -->
+          <div class="text-4xl font-heading font-bold text-white mb-2">
+            <span x-text="widget.prefix"></span><span :id="'counter-' + widget.id" x-text="counters[widget.id] || 0"></span><span x-text="widget.suffix"></span>
+          </div>
+
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed" x-text="widget.context"></p>
+        </div>
+
+        <!-- Horizontal Bar Chart (Chart.js) -->
+        <div class="border-t border-white/10 pt-4">
+          <div class="text-xs text-gray-400 mb-2 font-mono flex justify-between">
+            <span>Monthly Progression</span>
+            <span class="text-accent-soft" x-text="'Target: ' + widget.prefix + widget.target + widget.suffix"></span>
+          </div>
+          <div class="h-44 w-full">
+            <canvas :id="'chart-' + widget.id"></canvas>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</section>
+
+<!-- Selected Work Section -->
+<section id="selected-work" class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
     <div>
-      <h2 class="font-heading text-3xl font-bold text-white">Core Marketing Capabilities</h2>
-      <p class="text-gray-400 mt-1">Full-funnel digital marketing services focused on bottom-line results.</p>
+      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Client Portfolio</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-2">Selected Work</h2>
+      <p class="text-gray-300 text-sm md:text-base">Commercial clients and strategic marketing programs managed in the UAE.</p>
     </div>
-    <a href="/expertise/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1">
-      All Capabilities &rarr;
+    <a href="/work/" class="text-accent hover:text-accent-light text-sm font-semibold flex items-center gap-1.5 touch-target">
+      View All Work &rarr;
     </a>
   </div>
 
+  <!-- Grid of 5 Client Tiles (3-column on >=1200px, 2-column on 768-1199px, 1-col on mobile) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% set clients = [
+      {
+        "name": "Ecomate International LLC",
+        "slug": "ecomate-international-llc",
+        "industry": "E-Commerce & Retail",
+        "role": "Technical SEO Audit & Google Ads Restructuring",
+        "logo": "/assets/images/ecomate-logo.svg"
+      },
+      {
+        "name": "AITS Safety LLC",
+        "slug": "aits-safety-llc",
+        "industry": "Safety Services",
+        "role": "Local SEO & High-Intent B2B Search Campaigns",
+        "logo": "/assets/images/aits-safety-logo.svg"
+      },
+      {
+        "name": "Starline Security LLC",
+        "slug": "starline-security-llc",
+        "industry": "Security Services",
+        "role": "Commercial Lead Gen & CRO Landing Page Design",
+        "logo": "/assets/images/starline-security-logo.svg"
+      },
+      {
+        "name": "Digitz Technologies LLC",
+        "slug": "digitz-technologies-llc",
+        "industry": "Digital Agency (UAE)",
+        "role": "Full-Funnel Multi-Client Performance Marketing",
+        "logo": "/assets/images/digitz-technologies-logo.svg"
+      },
+      {
+        "name": "DMX Global Logistics",
+        "slug": "dmx-global-logistics",
+        "industry": "Freight & Logistics",
+        "role": "Cross-Border B2B Search & Logistics Keyword Strategy",
+        "logo": "/assets/images/dmx-logistics-logo.svg"
+      }
+    ] %}
+
+    {% for client in clients %}
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img 
+              src="{{ client.logo }}" 
+              alt="{{ client.name }} Logo" 
+              class="max-h-12 max-w-full object-contain" 
+              loading="lazy" 
+              width="200" 
+              height="50"
+            />
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">{{ client.name }}</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">{{ client.industry }}</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">{{ client.role }}</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/case-studies/{{ client.slug }}/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">{{ client.industry }}</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">{{ client.name }}</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">{{ client.role }}</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Expertise Snapshot Section -->
+<section class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll">
+  <div class="flex justify-between items-end mb-12">
+    <div>
+      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Specialization</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-2">Marketing Expertise</h2>
+      <p class="text-gray-300 text-sm md:text-base">Grouped technical marketing capabilities structured for sustainable client growth.</p>
+    </div>
+    <a href="/expertise/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1.5 touch-target">
+      View All Skills &rarr;
+    </a>
+  </div>
+
+  <!-- 4-Column Grid on >= 1200px, 2-Column on 768-1199px, 1-Col on Mobile -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
-      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
         🔍
       </div>
-      <h3 class="font-heading text-xl font-bold text-white mb-2">Technical & Local SEO</h3>
-      <p class="text-sm text-gray-400">Comprehensive site audits, Core Web Vitals optimization, keyword clustering, and Answer Engine Optimization (AEO).</p>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Search Engine Optimization</h3>
+      <p class="text-xs text-gray-400 mb-3">Technical SEO, Answer Engine Optimization (AEO), Core Web Vitals, and keyword mapping.</p>
+      <a href="/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore SEO sub-skills &rarr;</a>
     </div>
 
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
-      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
         📈
       </div>
-      <h3 class="font-heading text-xl font-bold text-white mb-2">Performance Marketing</h3>
-      <p class="text-sm text-gray-400">High-intent Google Ads (Search, Display, Performance Max) and Meta lead gen campaigns engineered for maximum ROAS.</p>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Performance Marketing</h3>
+      <p class="text-xs text-gray-400 mb-3">Google Ads (Search & PMax), Meta lead gen, Quality Score optimization, and negative match tuning.</p>
+      <a href="/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Paid Media &rarr;</a>
     </div>
 
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
-      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
         📊
       </div>
-      <h3 class="font-heading text-xl font-bold text-white mb-2">Analytics & Attribution</h3>
-      <p class="text-sm text-gray-400">End-to-end GA4 setup, server-side Google Tag Manager event tracking, Meta Pixel diagnostics, and Looker Studio dashboards.</p>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Analytics & Attribution</h3>
+      <p class="text-xs text-gray-400 mb-3">GA4 custom events, GTM containers, Meta Pixel / CAPI setup, and executive reporting.</p>
+      <a href="/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Analytics &rarr;</a>
     </div>
 
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
-      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
         ⚡
       </div>
-      <h3 class="font-heading text-xl font-bold text-white mb-2">Web Optimization</h3>
-      <p class="text-sm text-gray-400">WordPress & Elementor speed enhancement, landing page conversion rate optimization (CRO), and UX auditing.</p>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Website Optimization</h3>
+      <p class="text-xs text-gray-400 mb-3">WordPress, Elementor, Astra, HTML/CSS/JS, speed performance, and mobile CRO.</p>
+      <a href="/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Web Skills &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- Selected Work Preview -->
-<section class="py-16 border-b border-white/10">
-  <div class="flex justify-between items-end mb-10">
-    <div>
-      <h2 class="font-heading text-3xl font-bold text-white">Selected Client Work</h2>
-      <p class="text-gray-400 mt-1">Multi-channel engagements managed across UAE industries.</p>
-    </div>
-    <a href="/work/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1">
-      View All Clients &rarr;
-    </a>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
-      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">E-Commerce</span>
-      <h3 class="text-lg font-heading font-bold text-white mb-2">Ecomate International LLC</h3>
-      <p class="text-sm text-gray-300 mb-4">Full SEO audit and Google Ads restructuring delivering a 35% reduction in CPA.</p>
-      <a href="/case-studies/ecomate-international-llc/" class="text-xs font-semibold text-accent hover:underline">Read Case Study &rarr;</a>
-    </div>
-
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
-      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">Commercial Safety</span>
-      <h3 class="text-lg font-heading font-bold text-white mb-2">AITS Safety LLC</h3>
-      <p class="text-sm text-gray-300 mb-4">Local search optimization and commercial B2B search advertising targeting industrial hubs.</p>
-      <a href="/work/" class="text-xs font-semibold text-accent hover:underline">View Client Profile &rarr;</a>
-    </div>
-
-    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
-      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">Security Services</span>
-      <h3 class="text-lg font-heading font-bold text-white mb-2">Starline Security LLC</h3>
-      <p class="text-sm text-gray-300 mb-4">Conversion rate optimization and landing page design for enterprise security inquiries.</p>
-      <a href="/work/" class="text-xs font-semibold text-accent hover:underline">View Client Profile &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action Banner -->
-<section class="py-16 text-center">
-  <div class="max-w-2xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-white/5 via-white/10 to-white/5 border border-white/10">
-    <h2 class="font-heading text-3xl font-bold text-white mb-3">Ready to scale your organic & paid channels?</h2>
-    <p class="text-gray-300 mb-6">Let’s discuss your current search presence, campaign bottlenecks, and how to increase your qualified pipeline.</p>
-    <a href="/contact/" class="inline-block px-8 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/25 transition">
-      Start a Conversation
+<!-- Freelance Collaboration Callout -->
+<section class="py-16 md:py-20 text-center reveal-on-scroll">
+  <div class="max-w-2xl mx-auto p-10 rounded-2xl border border-white/10 bg-[#161616]">
+    <h2 class="font-heading text-3xl font-bold text-white mb-3">Looking for a Freelance Marketing Specialist?</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+      Whether you need an in-depth technical SEO audit, paid media restructuring to stop ad budget leakage, or full-funnel campaign execution, I'm currently accepting select freelance clients.
+    </p>
+    <a href="/contact/" class="touch-target inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
+      Initiate Freelance Project Inquiry
     </a>
   </div>
 </section>
 
+<!-- KPI Animated Counter & Chart.js Implementation -->
 <script>
-function kpiDashboard() {
+function kpiWidgetTracker() {
   return {
-    kpis: [],
-    activeIndex: 0,
-    chart: null,
-    get currentKpi() {
-      return this.kpis[this.activeIndex] || null;
-    },
+    widgets: [],
+    counters: {},
+    chartsLoaded: false,
     async init() {
       try {
         const res = await fetch('/data/kpis.json');
-        this.kpis = await res.json();
-        this.$nextTick(() => {
-          this.renderChart();
+        this.widgets = await res.json();
+        
+        // Initialize counter states at 0
+        this.widgets.forEach(w => {
+          this.counters[w.id] = 0;
         });
-      } catch (e) {
-        console.error("Failed to load KPI data", e);
+
+        // Set up IntersectionObserver to trigger counting & chart filling on scroll
+        this.$nextTick(() => {
+          this.setupScrollTrigger();
+        });
+      } catch (err) {
+        console.error("Failed to fetch KPI data:", err);
       }
     },
-    selectMetric(index) {
-      this.activeIndex = index;
-      this.renderChart();
+
+    setupScrollTrigger() {
+      const section = document.getElementById('kpi-widgets');
+      if (!section) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !this.chartsLoaded) {
+            this.chartsLoaded = true;
+            this.animateCounters();
+            this.renderHorizontalBarCharts();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(section);
     },
-    renderChart() {
-      if (!this.kpis.length) return;
-      const ctx = document.getElementById('kpiChart');
-      if (!ctx) return;
-      const current = this.kpis[this.activeIndex];
 
-      if (this.chart) {
-        this.chart.destroy();
-      }
+    animateCounters() {
+      const duration = 1800; // 1.8 seconds
+      const steps = 60;
+      const intervalTime = duration / steps;
 
-      this.chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: current.labels,
-          datasets: [{
-            label: current.title,
-            data: current.values,
-            borderColor: '#0FA9E6',
-            backgroundColor: 'rgba(15, 169, 230, 0.15)',
-            fill: true,
-            tension: 0.35,
-            borderWidth: 3,
-            pointBackgroundColor: '#0FA9E6',
-            pointRadius: 5,
-            pointHoverRadius: 7
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              labels: { color: '#E5E7EB', font: { family: 'Inter', size: 12 } }
-            },
-            tooltip: {
-              backgroundColor: '#191919',
-              borderColor: 'rgba(255,255,255,0.2)',
-              borderWidth: 1,
-              titleFont: { family: 'Inter' },
-              bodyFont: { family: 'Inter' }
-            }
+      this.widgets.forEach(w => {
+        const target = w.target;
+        const isDecimal = !!w.isDecimal;
+        let currentStep = 0;
+
+        const timer = setInterval(() => {
+          currentStep++;
+          const progress = currentStep / steps;
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = target * easeOut;
+
+          this.counters[w.id] = isDecimal ? currentVal.toFixed(2) : Math.round(currentVal);
+
+          if (currentStep >= steps) {
+            this.counters[w.id] = isDecimal ? target.toFixed(2) : target;
+            clearInterval(timer);
+          }
+        }, intervalTime);
+      });
+    },
+
+    renderHorizontalBarCharts() {
+      this.widgets.forEach(w => {
+        const canvasId = 'chart-' + w.id;
+        const ctx = document.getElementById(canvasId);
+        if (!ctx) return;
+
+        // Chart.js Horizontal Bar Chart (indexAxis: 'y')
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: w.labels,
+            datasets: [{
+              label: w.title,
+              data: w.values,
+              backgroundColor: '#0FA9E6',
+              hoverBackgroundColor: '#7FD6FF',
+              borderRadius: 4,
+              borderSkipped: false,
+              barThickness: 12
+            }]
           },
-          scales: {
-            x: {
-              grid: { color: 'rgba(255,255,255,0.06)' },
-              ticks: { color: '#9CA3AF', font: { family: 'Inter' } }
+          options: {
+            indexAxis: 'y', // Required: Horizontal bar chart
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: {
+              duration: 1600,
+              easing: 'easeOutQuart'
             },
-            y: {
-              grid: { color: 'rgba(255,255,255,0.06)' },
-              ticks: { color: '#9CA3AF', font: { family: 'Inter' } }
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: '#141414',
+                borderColor: 'rgba(255,255,255,0.2)',
+                borderWidth: 1,
+                titleColor: '#FFFFFF',
+                bodyColor: '#7FD6FF',
+                titleFont: { family: 'Inter', size: 12, weight: '600' },
+                bodyFont: { family: 'Inter', size: 12 },
+                callbacks: {
+                  label: function(context) {
+                    return `${w.prefix || ''}${context.parsed.x}${w.suffix || ''}`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { color: 'rgba(255,255,255,0.06)' },
+                ticks: {
+                  color: '#9CA3AF',
+                  font: { family: 'Inter', size: 10 }
+                }
+              },
+              y: {
+                grid: { display: false },
+                ticks: {
+                  color: '#D1D5DB',
+                  font: { family: 'Inter', size: 11, weight: '500' }
+                }
+              }
             }
           }
-        }
+        });
       });
     }
   };

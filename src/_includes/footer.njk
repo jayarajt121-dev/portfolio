@@ -1,18 +1,37 @@
-<footer class="border-t border-white/10 bg-[#151515] py-10 mt-auto text-gray-400">
-  <div class="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-    <div class="text-center md:text-left">
-      <p class="font-heading font-semibold text-lg text-white">Jayaraj T</p>
-      <p class="text-xs text-gray-400 mt-1">Digital Marketer & Growth Strategist • Calicut & UAE</p>
-    </div>
-    
-    <div class="flex flex-wrap justify-center gap-6">
-      <a href="https://linkedin.com/in/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
-      <a href="https://twitter.com/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Twitter / X</a>
-      <a href="mailto:jayaraj@example.com" class="hover:text-accent transition-colors">jayaraj@example.com</a>
+<footer class="border-t border-white/10 bg-[#141414] py-12 mt-auto text-gray-400">
+  <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8 pb-8 border-b border-white/10">
+      <div>
+        <h2 class="font-heading font-bold text-2xl text-white">Jayaraj T</h2>
+        <p class="text-sm text-gray-400 mt-1">Digital Marketer • Calicut, Kerala & UAE</p>
+        <p class="text-xs text-accent mt-1 italic font-heading">“Somehow, This Is My Profession.”</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="/contact/" class="touch-target px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+          Discuss a Freelance Project
+        </a>
+      </div>
     </div>
 
-    <div class="text-xs text-gray-500">
-      © {{ "now" | date("%Y") }} Jayaraj T. All rights reserved.
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div class="flex items-center space-x-6">
+        <a href="https://linkedin.com/in/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Twitter / X
+        </a>
+        <a href="mailto:jayaraj@example.com" class="hover:text-accent transition-colors touch-target">
+          jayaraj@example.com
+        </a>
+      </div>
+
+      <div>
+        © {{ "now" | date("%Y") }} Jayaraj T. Built with Eleventy & Tailwind CSS.
+      </div>
     </div>
   </div>
 </footer>

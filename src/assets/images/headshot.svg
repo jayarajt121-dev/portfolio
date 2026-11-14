@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" class="w-full h-auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E232A"/>
+      <stop offset="100%" stop-color="#14171C"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#0FA9E6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0FA9E6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="32" fill="url(#bgGrad)"/>
+  <rect width="600" height="600" rx="32" fill="url(#blueGlow)"/>
+  
+  <!-- Silhouette / Stylized Portrait of Digital Marketer -->
+  <g transform="translate(150, 90)">
+    <!-- Shoulders -->
+    <path d="M -30 420 C -20 310 70 270 150 270 C 230 270 320 310 330 420 Z" fill="#222831" stroke="#0FA9E6" stroke-width="2" stroke-opacity="0.3"/>
+    
+    <!-- Neck -->
+    <path d="M 120 230 L 120 280 L 180 280 L 180 230 Z" fill="#28303B"/>
+    
+    <!-- Head -->
+    <ellipse cx="150" cy="170" rx="65" ry="85" fill="#252C36" stroke="#0FA9E6" stroke-width="2" stroke-opacity="0.4"/>
+    
+    <!-- Hair -->
+    <path d="M 85 150 C 85 90 120 70 150 70 C 180 70 215 90 215 150 C 200 115 170 100 150 100 C 130 100 100 115 85 150 Z" fill="#151A21"/>
+    
+    <!-- Analytics Data Overlay / Graph Graphic across Chest -->
+    <path d="M 40 370 L 90 340 L 140 355 L 190 310 L 240 330 L 280 290" stroke="#0FA9E6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="190" cy="310" r="5" fill="#7FD6FF"/>
+    <circle cx="280" cy="290" r="6" fill="#5ED9D1"/>
+  </g>
+  
+  <!-- Cool Blue Overlay Badge -->
+  <g transform="translate(60, 500)">
+    <rect width="480" height="60" rx="12" fill="#191919" fill-opacity="0.9" stroke="#0FA9E6" stroke-width="1.5" stroke-opacity="0.6"/>
+    <text x="24" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#FFFFFF">Jayaraj T</text>
+    <text x="110" y="36" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#7FD6FF">• Digital Marketer (UAE / India)</text>
+  </g>
+</svg>

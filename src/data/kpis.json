@@ -1,23 +1,33 @@
 [
   {
     "id": "leads",
-    "title": "Qualified B2B Leads",
-    "unit": "leads",
+    "title": "Monthly Inbound Leads",
+    "target": 65,
+    "prefix": "",
+    "suffix": " leads",
     "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
-    "values": [14, 22, 31, 46, 62]
+    "values": [12, 18, 25, 42, 65],
+    "context": "Multi-channel lead volume across search and performance campaigns."
   },
   {
     "id": "cpc",
-    "title": "Avg. CPC (AED)",
-    "unit": "AED",
+    "title": "Average Cost Per Click",
+    "target": 1.85,
+    "prefix": "AED ",
+    "suffix": "",
+    "isDecimal": true,
     "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
-    "values": [3.4, 3.0, 2.7, 2.3, 1.85]
+    "values": [3.40, 2.95, 2.50, 2.15, 1.85],
+    "context": "CPC reduction achieved through negative matching and Quality Score gains."
   },
   {
-    "id": "roas",
-    "title": "Blended ROAS",
-    "unit": "x",
+    "id": "sessions",
+    "title": "Monthly Organic Sessions",
+    "target": 2600,
+    "prefix": "",
+    "suffix": " visits",
     "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
-    "values": [2.1, 2.6, 3.2, 3.8, 4.4]
+    "values": [1200, 1500, 1800, 2150, 2600],
+    "context": "Organic search traffic growth following technical audits and content clustering."
   }
 ]
