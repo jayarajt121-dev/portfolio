@@ -1,0 +1,264 @@
+---
+layout: base.njk
+title: Home
+permalink: /
+---
+<!-- Hero Section -->
+<section class="py-12 md:py-20 flex flex-col items-start gap-6 border-b border-white/10">
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/25 text-accent text-xs font-semibold uppercase tracking-wider">
+    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+    Available for High-Impact Freelance & Consulting Engagements
+  </div>
+  
+  <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight max-w-4xl">
+    Driving Measurable Growth Through <span class="text-accent underline decoration-accent/40 decoration-wavy">Data-Backed</span> Digital Marketing.
+  </h1>
+
+  <div class="space-y-3 max-w-2xl">
+    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+      Hi, I’m <strong class="text-white">Jayaraj T</strong> — a Digital Marketer and performance strategist based in Calicut, Kerala, executing high-ROI campaigns across the UAE for <strong class="text-white">Digitz Technologies</strong>.
+    </p>
+    <p class="text-sm italic text-gray-400 font-heading">
+      &ldquo;Somehow, this is my profession.&rdquo; — Blending computer science rigor with creative, full-funnel performance marketing.
+    </p>
+  </div>
+
+  <div class="flex flex-wrap items-center gap-4 pt-2">
+    <a href="/case-studies/" class="px-6 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
+      View Case Studies
+    </a>
+    <a href="/contact/" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-200 font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+      Let's Talk
+    </a>
+  </div>
+</section>
+
+<!-- KPI Performance Metrics Section -->
+<section class="py-16 border-b border-white/10" x-data="kpiDashboard()">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+    <div>
+      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-1">Interactive Metrics</span>
+      <h2 class="font-heading text-3xl font-bold text-white">Performance Highlights</h2>
+      <p class="text-gray-400 mt-1">Real campaign metrics achieved across client engagements in the UAE.</p>
+    </div>
+    
+    <!-- Chart selector buttons -->
+    <div class="flex flex-wrap gap-2 p-1 bg-white/5 rounded-lg border border-white/10">
+      <template x-for="(kpi, index) in kpis" :key="kpi.id">
+        <button 
+          @click="selectMetric(index)"
+          :class="activeIndex === index ? 'bg-accent text-white shadow-sm' : 'text-gray-400 hover:text-white'"
+          class="px-3.5 py-1.5 rounded-md text-xs font-medium transition-all duration-150"
+          x-text="kpi.title">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- Metric Stats Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Qualified B2B Leads</div>
+      <div class="text-3xl font-bold text-white mb-2">+342%</div>
+      <p class="text-sm text-gray-400">Monthly high-intent qualified leads generated through restructured Google Search and intent-matched landing pages.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Paid Search Efficiency</div>
+      <div class="text-3xl font-bold text-white mb-2">-45%</div>
+      <p class="text-sm text-gray-400">Reduction in average Cost Per Click (CPC) via Quality Score optimization and aggressive negative keyword sculpting.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition-colors">
+      <div class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Return on Ad Spend</div>
+      <div class="text-3xl font-bold text-white mb-2">4.4x</div>
+      <p class="text-sm text-gray-400">Blended ROAS sustained across client e-commerce and commercial service campaigns in the UAE.</p>
+    </div>
+  </div>
+
+  <!-- Interactive Chart Container -->
+  <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-sm font-semibold text-gray-300" x-text="currentKpi?.title"></h3>
+      <span class="text-xs text-gray-400">Monthly Progression (5-Month Window)</span>
+    </div>
+    <div class="h-72 w-full">
+      <canvas id="kpiChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- Core Services / Expertise -->
+<section class="py-16 border-b border-white/10">
+  <div class="flex justify-between items-end mb-10">
+    <div>
+      <h2 class="font-heading text-3xl font-bold text-white">Core Marketing Capabilities</h2>
+      <p class="text-gray-400 mt-1">Full-funnel digital marketing services focused on bottom-line results.</p>
+    </div>
+    <a href="/expertise/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1">
+      All Capabilities &rarr;
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
+      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+        🔍
+      </div>
+      <h3 class="font-heading text-xl font-bold text-white mb-2">Technical & Local SEO</h3>
+      <p class="text-sm text-gray-400">Comprehensive site audits, Core Web Vitals optimization, keyword clustering, and Answer Engine Optimization (AEO).</p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
+      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+        📈
+      </div>
+      <h3 class="font-heading text-xl font-bold text-white mb-2">Performance Marketing</h3>
+      <p class="text-sm text-gray-400">High-intent Google Ads (Search, Display, Performance Max) and Meta lead gen campaigns engineered for maximum ROAS.</p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
+      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+        📊
+      </div>
+      <h3 class="font-heading text-xl font-bold text-white mb-2">Analytics & Attribution</h3>
+      <p class="text-sm text-gray-400">End-to-end GA4 setup, server-side Google Tag Manager event tracking, Meta Pixel diagnostics, and Looker Studio dashboards.</p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 transition duration-200">
+      <div class="w-10 h-10 rounded-lg bg-accent/15 text-accent flex items-center justify-center font-bold mb-4">
+        ⚡
+      </div>
+      <h3 class="font-heading text-xl font-bold text-white mb-2">Web Optimization</h3>
+      <p class="text-sm text-gray-400">WordPress & Elementor speed enhancement, landing page conversion rate optimization (CRO), and UX auditing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Selected Work Preview -->
+<section class="py-16 border-b border-white/10">
+  <div class="flex justify-between items-end mb-10">
+    <div>
+      <h2 class="font-heading text-3xl font-bold text-white">Selected Client Work</h2>
+      <p class="text-gray-400 mt-1">Multi-channel engagements managed across UAE industries.</p>
+    </div>
+    <a href="/work/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1">
+      View All Clients &rarr;
+    </a>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">E-Commerce</span>
+      <h3 class="text-lg font-heading font-bold text-white mb-2">Ecomate International LLC</h3>
+      <p class="text-sm text-gray-300 mb-4">Full SEO audit and Google Ads restructuring delivering a 35% reduction in CPA.</p>
+      <a href="/case-studies/ecomate-international-llc/" class="text-xs font-semibold text-accent hover:underline">Read Case Study &rarr;</a>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">Commercial Safety</span>
+      <h3 class="text-lg font-heading font-bold text-white mb-2">AITS Safety LLC</h3>
+      <p class="text-sm text-gray-300 mb-4">Local search optimization and commercial B2B search advertising targeting industrial hubs.</p>
+      <a href="/work/" class="text-xs font-semibold text-accent hover:underline">View Client Profile &rarr;</a>
+    </div>
+
+    <div class="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 transition">
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent mb-3 inline-block">Security Services</span>
+      <h3 class="text-lg font-heading font-bold text-white mb-2">Starline Security LLC</h3>
+      <p class="text-sm text-gray-300 mb-4">Conversion rate optimization and landing page design for enterprise security inquiries.</p>
+      <a href="/work/" class="text-xs font-semibold text-accent hover:underline">View Client Profile &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="py-16 text-center">
+  <div class="max-w-2xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-white/5 via-white/10 to-white/5 border border-white/10">
+    <h2 class="font-heading text-3xl font-bold text-white mb-3">Ready to scale your organic & paid channels?</h2>
+    <p class="text-gray-300 mb-6">Let’s discuss your current search presence, campaign bottlenecks, and how to increase your qualified pipeline.</p>
+    <a href="/contact/" class="inline-block px-8 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/25 transition">
+      Start a Conversation
+    </a>
+  </div>
+</section>
+
+<script>
+function kpiDashboard() {
+  return {
+    kpis: [],
+    activeIndex: 0,
+    chart: null,
+    get currentKpi() {
+      return this.kpis[this.activeIndex] || null;
+    },
+    async init() {
+      try {
+        const res = await fetch('/data/kpis.json');
+        this.kpis = await res.json();
+        this.$nextTick(() => {
+          this.renderChart();
+        });
+      } catch (e) {
+        console.error("Failed to load KPI data", e);
+      }
+    },
+    selectMetric(index) {
+      this.activeIndex = index;
+      this.renderChart();
+    },
+    renderChart() {
+      if (!this.kpis.length) return;
+      const ctx = document.getElementById('kpiChart');
+      if (!ctx) return;
+      const current = this.kpis[this.activeIndex];
+
+      if (this.chart) {
+        this.chart.destroy();
+      }
+
+      this.chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: current.labels,
+          datasets: [{
+            label: current.title,
+            data: current.values,
+            borderColor: '#0FA9E6',
+            backgroundColor: 'rgba(15, 169, 230, 0.15)',
+            fill: true,
+            tension: 0.35,
+            borderWidth: 3,
+            pointBackgroundColor: '#0FA9E6',
+            pointRadius: 5,
+            pointHoverRadius: 7
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: '#E5E7EB', font: { family: 'Inter', size: 12 } }
+            },
+            tooltip: {
+              backgroundColor: '#191919',
+              borderColor: 'rgba(255,255,255,0.2)',
+              borderWidth: 1,
+              titleFont: { family: 'Inter' },
+              bodyFont: { family: 'Inter' }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(255,255,255,0.06)' },
+              ticks: { color: '#9CA3AF', font: { family: 'Inter' } }
+            },
+            y: {
+              grid: { color: 'rgba(255,255,255,0.06)' },
+              ticks: { color: '#9CA3AF', font: { family: 'Inter' } }
+            }
+          }
+        }
+      });
+    }
+  };
+}
+</script>

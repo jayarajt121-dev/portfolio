@@ -1,0 +1,11 @@
+/* src/assets/css/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities */
+@layer utilities {
+  .bg-primary { background-color: theme('colors.background'); }
+  .text-accent { color: theme('colors.accent'); }
+  .border-accent { border-color: theme('colors.accent'); }
+}

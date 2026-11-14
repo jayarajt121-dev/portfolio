@@ -1,0 +1,11 @@
+[
+  { "label": "Home", "url": "/" },
+  { "label": "About", "url": "/about/" },
+  { "label": "Expertise", "url": "/expertise/" },
+  { "label": "Selected Work", "url": "/work/" },
+  { "label": "Case Studies", "url": "/case-studies/" },
+  { "label": "Experience", "url": "/experience/" },
+  { "label": "Tools", "url": "/tools/" },
+  { "label": "Insights", "url": "/insights/" },
+  { "label": "Contact", "url": "/contact/" }
+]

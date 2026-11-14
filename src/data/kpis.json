@@ -1,0 +1,23 @@
+[
+  {
+    "id": "leads",
+    "title": "Qualified B2B Leads",
+    "unit": "leads",
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "values": [14, 22, 31, 46, 62]
+  },
+  {
+    "id": "cpc",
+    "title": "Avg. CPC (AED)",
+    "unit": "AED",
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "values": [3.4, 3.0, 2.7, 2.3, 1.85]
+  },
+  {
+    "id": "roas",
+    "title": "Blended ROAS",
+    "unit": "x",
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "values": [2.1, 2.6, 3.2, 3.8, 4.4]
+  }
+]

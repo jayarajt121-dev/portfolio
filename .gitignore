@@ -1,0 +1,9 @@
+# .gitignore
+node_modules/
+.dist/
+.cache/
+.DS_Store
+dist/
+
+# Tailwind generated CSS
+src/assets/css/style.css

@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Contact & Consultations
+permalink: /contact/
+---
+<div class="max-w-4xl mx-auto py-8">
+  <div class="mb-10">
+    <span class="text-accent text-sm font-semibold uppercase tracking-wider">Let's Connect</span>
+    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mt-2 mb-4">Get in Touch</h1>
+    <p class="text-lg text-gray-300">
+      Interested in scaling your organic reach, optimizing your paid ad spend, or discussing consulting and speaking engagements? Let's talk.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-5 gap-10">
+    <!-- Contact Info Cards -->
+    <div class="md:col-span-2 space-y-6">
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl space-y-4">
+        <h2 class="font-heading text-xl font-bold text-white">Direct Channels</h2>
+        
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide block">Email</span>
+          <a href="mailto:jayaraj@example.com" class="text-accent hover:text-accent-light font-medium text-sm">
+            jayaraj@example.com
+          </a>
+        </div>
+
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide block">Location</span>
+          <span class="text-sm text-gray-300">Calicut, Kerala, India (IST)</span>
+        </div>
+
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide block">Client Coverage</span>
+          <span class="text-sm text-gray-300">UAE / GCC & International Markets</span>
+        </div>
+
+        <div>
+          <span class="text-xs text-gray-400 uppercase tracking-wide block">Response Time</span>
+          <span class="text-sm text-gray-300">Typically within 24 business hours</span>
+        </div>
+      </div>
+
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl space-y-3">
+        <h2 class="font-heading text-base font-bold text-white">Professional Networks</h2>
+        <div class="flex flex-col space-y-2 text-sm">
+          <a href="https://linkedin.com/in/jayaraj" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-light transition">
+            &rarr; Connect on LinkedIn
+          </a>
+          <a href="https://twitter.com/jayaraj" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-light transition">
+            &rarr; Follow on Twitter / X
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="md:col-span-3 p-8 bg-white/5 border border-white/10 rounded-2xl" x-data="{ name: '', email: '', subject: 'Marketing Inquiry', message: '' }">
+      <h2 class="font-heading text-2xl font-bold text-white mb-6">Send a Message</h2>
+      
+      <form @submit.prevent="window.location.href = `mailto:jayaraj@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Hi Jayaraj,\n\n' + message + '\n\nFrom: ' + name + ' (' + email + ')')}`" class="space-y-5">
+        <div>
+          <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Your Name</label>
+          <input 
+            x-model="name"
+            id="name" 
+            type="text" 
+            required 
+            placeholder="e.g. Sarah Jenkins"
+            class="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm transition"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email Address</label>
+          <input 
+            x-model="email"
+            id="email" 
+            type="email" 
+            required 
+            placeholder="you@company.com"
+            class="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm transition"
+          />
+        </div>
+
+        <div>
+          <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Inquiry Type</label>
+          <select 
+            x-model="subject"
+            id="subject" 
+            class="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white text-sm focus:outline-none focus:border-accent transition"
+          >
+            <option value="SEO & AEO Audit Inquiry">SEO & AEO Audit Inquiry</option>
+            <option value="Paid Ads / PPC Management">Paid Ads / PPC Management</option>
+            <option value="CRO & Web Optimization">CRO & Web Optimization</option>
+            <option value="General Consulting / Freelance Project">General Consulting / Freelance Project</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Message</label>
+          <textarea 
+            x-model="message"
+            id="message" 
+            rows="5" 
+            required 
+            placeholder="Tell me a bit about your business, current traffic/marketing channels, and primary goals..."
+            class="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent text-sm transition"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-3.5 px-6 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/25 transition flex items-center justify-center gap-2"
+        >
+          <span>Send Inquiry</span>
+          <span>&rarr;</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
