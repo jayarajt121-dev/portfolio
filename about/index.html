@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Jayaraj T – Digital Marketer | Jayaraj T – Digital Marketer</title>
+  <meta name="description" content="Personal portfolio of Jayaraj T, a digital marketer specializing in SEO, Performance Marketing, and Analytics for freelance clients.">
+  <meta name="author" content="Jayaraj T">
+  
+  <!-- Preconnect & Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Compiled Tailwind CSS -->
+  <link href="/portfolio/assets/css/style.css" rel="stylesheet">
+  
+  <!-- Interactivity & Charts: Alpine.js & Chart.js -->
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="bg-[#191919] text-gray-200 font-body antialiased min-h-screen flex flex-col selection:bg-[#0FA9E6] selection:text-white">
+  <!-- Skip to Content for Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#0FA9E6] focus:text-white focus:rounded focus:outline-none">
+    Skip to main content
+  </a>
+
+  <header x-data="{ open: false }" class="fixed top-0 inset-x-0 bg-[#191919]/95 backdrop-blur-md border-b border-white/10 z-50">
+  <div class="container mx-auto max-w-6xl flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3">
+    <!-- Brand Title -->
+    <a href="/portfolio/" class="text-2xl font-heading font-bold text-accent tracking-tight hover:text-accent-light transition-colors touch-target">
+      Jayaraj T
+    </a>
+    
+    <!-- Mobile Hamburger Toggle Button (>= 44px touch target, ARIA compliant) -->
+    <button @click="open = !open" :aria-expanded="open" aria-label="Toggle Navigation Menu" class="md:hidden text-gray-300 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded touch-target justify-center">
+      <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg x-show="open" style="display: none;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Navigation Bar -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium" aria-label="Main Navigation">
+      
+        <a href="/portfolio/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Home
+        </a>
+      
+        <a href="/portfolio/about/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          About
+        </a>
+      
+        <a href="/portfolio/expertise/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Expertise
+        </a>
+      
+        <a href="/portfolio/work/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Selected Work
+        </a>
+      
+        <a href="/portfolio/case-studies/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Case Studies
+        </a>
+      
+        <a href="/portfolio/experience/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Experience
+        </a>
+      
+        <a href="/portfolio/tools/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Tools
+        </a>
+      
+        <a href="/portfolio/insights/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Insights
+        </a>
+      
+        <a href="/portfolio/contact/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Contact
+        </a>
+      
+      <a href="/portfolio/contact/" class="touch-target px-4 py-2 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+        Hire Me
+      </a>
+    </nav>
+  </div>
+
+  <!-- Mobile Slide-In Navigation Drawer -->
+  <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" style="display: none;" class="md:hidden border-b border-white/10 bg-[#161616] px-6 py-6 shadow-2xl" aria-label="Mobile Navigation Drawer">
+    <div class="flex flex-col space-y-1">
+      
+        <a href="/portfolio/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Home
+        </a>
+      
+        <a href="/portfolio/about/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          About
+        </a>
+      
+        <a href="/portfolio/expertise/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Expertise
+        </a>
+      
+        <a href="/portfolio/work/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Selected Work
+        </a>
+      
+        <a href="/portfolio/case-studies/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Case Studies
+        </a>
+      
+        <a href="/portfolio/experience/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Experience
+        </a>
+      
+        <a href="/portfolio/tools/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Tools
+        </a>
+      
+        <a href="/portfolio/insights/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Insights
+        </a>
+      
+        <a href="/portfolio/contact/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Contact
+        </a>
+      
+      <div class="pt-4 mt-2 border-t border-white/10">
+        <a href="/portfolio/contact/" @click="open = false" class="touch-target w-full justify-center px-4 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors shadow-md">
+          Let's Discuss a Project
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main-content" class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 max-w-6xl">
+    <div class="py-8 md:py-16 reveal-on-scroll">
+  <!-- Header -->
+  <div class="max-w-3xl mb-12">
+    <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Professional Profile</span>
+    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">About Jayaraj T</h1>
+    <p class="text-lg md:text-xl text-gray-300 font-body leading-relaxed">
+      A digital marketer with a computer science foundation, focused on technical SEO, performance marketing, and data-driven client acquisition.
+    </p>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 border-t border-white/10 pt-12">
+    <!-- Main Narrative: Career Journey, UAE Role, Personal Statement -->
+    <div class="lg:col-span-8 space-y-8 text-gray-300 leading-relaxed font-body">
+      <section>
+        <h2 class="text-2xl font-heading font-bold text-white mb-3">The Engineering Foundation</h2>
+        <p>
+          I hold a <strong>B.Sc. in Computer Science</strong> from the <strong>University of Calicut</strong>. While traditional marketing often operates on surface intuition, my computer science background provides an engineering foundation: I understand DOM manipulation, rendering lifecycles, structured data parsing, and algorithmic behavior.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-heading font-bold text-white mb-3">Career Journey & Early Internship</h2>
+        <p>
+          My digital marketing path started with an intensive internship at <strong>Softroniics</strong> in Calicut. There, I was immersed in the mechanics of commercial keyword research, on-page optimization, search engine audit methodology, and ad-copy experimentation. That experience crystallized my approach: marketing is an applied science where data precision directly impacts revenue.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-heading font-bold text-white mb-3">Current Role: Digitz Technologies (UAE)</h2>
+        <p>
+          Currently, I drive digital marketing and search campaigns for clients at <strong>Digitz Technologies LLC</strong>, a premier UAE-based digital agency. In this role, I manage full-funnel digital marketing across key commercial verticals, including e-commerce, commercial safety systems, enterprise security, and international logistics. My daily responsibilities center on structuring Google Ads search campaigns, setting up end-to-end attribution (GA4, GTM, Meta Pixel), and executing technical SEO overhauls.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-heading font-bold text-white mb-3">Personal Statement: &ldquo;Somehow, This Is My Profession.&rdquo;</h2>
+        <p>
+          Many people enter digital marketing by accident; I embraced it deliberately because it is where technical precision meets real-world human intent. Every keyword search is a live query into what a consumer or business genuinely needs at that second.
+        </p>
+        <p class="mt-4">
+          For freelance clients, I offer a clear, transparent engagement model: no vanity metrics, no fluff reports. I audit your digital footprint, identify where potential customers or ad dollars are being lost, and execute high-precision organic and paid campaigns.
+        </p>
+      </section>
+    </div>
+
+    <!-- Sidebar: Fast Facts & Freelance Callout -->
+    <div class="lg:col-span-4 space-y-6">
+      <div class="p-6 rounded-xl border border-white/10 bg-[#161616]">
+        <h3 class="font-heading font-bold text-lg text-white mb-4 pb-3 border-b border-white/10">Fast Facts</h3>
+        
+        <div class="space-y-4 text-xs">
+          <div>
+            <span class="text-gray-400 uppercase tracking-wide block">Based In</span>
+            <span class="text-sm font-medium text-white">Calicut, Kerala, India</span>
+          </div>
+          <div>
+            <span class="text-gray-400 uppercase tracking-wide block">Current Agency</span>
+            <span class="text-sm font-medium text-white">Digitz Technologies (UAE)</span>
+          </div>
+          <div>
+            <span class="text-gray-400 uppercase tracking-wide block">Education</span>
+            <span class="text-sm font-medium text-white">B.Sc. Computer Science<br><span class="text-gray-400 font-normal">University of Calicut</span></span>
+          </div>
+          <div>
+            <span class="text-gray-400 uppercase tracking-wide block">Internship</span>
+            <span class="text-sm font-medium text-white">Softroniics</span>
+          </div>
+          <div>
+            <span class="text-gray-400 uppercase tracking-wide block">Primary Target</span>
+            <span class="text-sm font-medium text-accent">Freelance Clients & Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-xl border border-accent/30 bg-[#161616]">
+        <h3 class="font-heading font-bold text-base text-white mb-2">Freelance Collaborations</h3>
+        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+          Available for technical SEO audits, Google Ads setup & audits, and conversion optimization for commercial businesses.
+        </p>
+        <a href="/portfolio/contact/" class="touch-target w-full justify-center px-4 py-2.5 text-xs font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+          Inquire for Freelance &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#141414] py-12 mt-auto text-gray-400">
+  <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8 pb-8 border-b border-white/10">
+      <div>
+        <h2 class="font-heading font-bold text-2xl text-white">Jayaraj T</h2>
+        <p class="text-sm text-gray-400 mt-1">Digital Marketer • Calicut, Kerala & UAE</p>
+        <p class="text-xs text-accent mt-1 italic font-heading">“Somehow, This Is My Profession.”</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="/portfolio/contact/" class="touch-target px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+          Discuss a Freelance Project
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div class="flex items-center space-x-6">
+        <a href="https://linkedin.com/in/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          Twitter / X
+        </a>
+        <a href="mailto:jayaraj@example.com" class="hover:text-accent transition-colors touch-target">
+          jayaraj@example.com
+        </a>
+      </div>
+
+      <div>
+        © 2026 Jayaraj T. Built with Eleventy & Tailwind CSS.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Section Reveal Scroll Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, index * 100);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

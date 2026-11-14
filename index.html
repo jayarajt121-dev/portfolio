@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketer for High-Growth Brands | Jayaraj T – Digital Marketer</title>
+  <meta name="description" content="Personal portfolio of Jayaraj T, a digital marketer specializing in SEO, Performance Marketing, and Analytics for freelance clients.">
+  <meta name="author" content="Jayaraj T">
+  
+  <!-- Preconnect & Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Compiled Tailwind CSS -->
+  <link href="/portfolio/assets/css/style.css" rel="stylesheet">
+  
+  <!-- Interactivity & Charts: Alpine.js & Chart.js -->
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="bg-[#191919] text-gray-200 font-body antialiased min-h-screen flex flex-col selection:bg-[#0FA9E6] selection:text-white">
+  <!-- Skip to Content for Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#0FA9E6] focus:text-white focus:rounded focus:outline-none">
+    Skip to main content
+  </a>
+
+  <header x-data="{ open: false }" class="fixed top-0 inset-x-0 bg-[#191919]/95 backdrop-blur-md border-b border-white/10 z-50">
+  <div class="container mx-auto max-w-6xl flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3">
+    <!-- Brand Title -->
+    <a href="/portfolio/" class="text-2xl font-heading font-bold text-accent tracking-tight hover:text-accent-light transition-colors touch-target">
+      Jayaraj T
+    </a>
+    
+    <!-- Mobile Hamburger Toggle Button (>= 44px touch target, ARIA compliant) -->
+    <button @click="open = !open" :aria-expanded="open" aria-label="Toggle Navigation Menu" class="md:hidden text-gray-300 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded touch-target justify-center">
+      <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg x-show="open" style="display: none;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Navigation Bar -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium" aria-label="Main Navigation">
+      
+        <a href="/portfolio/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Home
+        </a>
+      
+        <a href="/portfolio/about/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          About
+        </a>
+      
+        <a href="/portfolio/expertise/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Expertise
+        </a>
+      
+        <a href="/portfolio/work/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Selected Work
+        </a>
+      
+        <a href="/portfolio/case-studies/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Case Studies
+        </a>
+      
+        <a href="/portfolio/experience/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Experience
+        </a>
+      
+        <a href="/portfolio/tools/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Tools
+        </a>
+      
+        <a href="/portfolio/insights/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Insights
+        </a>
+      
+        <a href="/portfolio/contact/" class="text-gray-300 hover:text-accent-light transition-colors py-1">
+          Contact
+        </a>
+      
+      <a href="/portfolio/contact/" class="touch-target px-4 py-2 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+        Hire Me
+      </a>
+    </nav>
+  </div>
+
+  <!-- Mobile Slide-In Navigation Drawer -->
+  <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" style="display: none;" class="md:hidden border-b border-white/10 bg-[#161616] px-6 py-6 shadow-2xl" aria-label="Mobile Navigation Drawer">
+    <div class="flex flex-col space-y-1">
+      
+        <a href="/portfolio/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Home
+        </a>
+      
+        <a href="/portfolio/about/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          About
+        </a>
+      
+        <a href="/portfolio/expertise/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Expertise
+        </a>
+      
+        <a href="/portfolio/work/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Selected Work
+        </a>
+      
+        <a href="/portfolio/case-studies/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Case Studies
+        </a>
+      
+        <a href="/portfolio/experience/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Experience
+        </a>
+      
+        <a href="/portfolio/tools/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Tools
+        </a>
+      
+        <a href="/portfolio/insights/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Insights
+        </a>
+      
+        <a href="/portfolio/contact/" @click="open = false" class="touch-target text-base font-medium text-gray-200 hover:text-accent hover:bg-white/5 px-3 rounded-lg transition-colors">
+          Contact
+        </a>
+      
+      <div class="pt-4 mt-2 border-t border-white/10">
+        <a href="/portfolio/contact/" @click="open = false" class="touch-target w-full justify-center px-4 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors shadow-md">
+          Let's Discuss a Project
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main-content" class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 max-w-6xl">
+    <!-- Hero Section -->
+<section class="py-12 md:py-24 border-b border-white/10">
+  <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Left Column: Copy & CTAs -->
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        Digital Marketer &bull; Freelance & Consulting Available
+      </div>
+
+      <!-- Tagline with 30px slide-up and fade-in (0.8s) -->
+      <h1 class="animate-hero font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+        &ldquo;Somehow, This Is My Profession.&rdquo;
+      </h1>
+
+      <!-- 2-3 Line Analytical Intro -->
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-body max-w-xl">
+        I am a digital marketer based in Calicut, Kerala, currently engineering high-ROI search and paid-media campaigns for UAE clients at <strong class="text-white">Digitz Technologies</strong>. With a background in Computer Science, I translate deep technical architecture and search behavior into measurable customer acquisition.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <!-- Exact CTA Button -->
+        <a href="#selected-work" class="touch-target px-7 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
+          View My Work
+        </a>
+        <a href="/portfolio/contact/" class="touch-target px-7 py-3 bg-white/5 hover:bg-white/10 text-gray-200 font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+          Contact for Freelance
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Visual Portrait Asset with Cool-Blue Overlay -->
+    <div class="lg:col-span-5 relative">
+      <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden border border-white/10 bg-[#161616]">
+        <img src="/portfolio/assets/images/headshot.svg" alt="Jayaraj T – Digital Marketer" class="w-full h-auto object-cover" width="500" height="500" loading="eager">
+        <div class="absolute inset-0 bg-[#0FA9E6]/10 mix-blend-overlay pointer-events-none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KPI Widgets Section -->
+<section id="kpi-widgets" class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll" x-data="kpiWidgetTracker()">
+  <div class="max-w-3xl mb-12">
+    <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Verified Engagement Data</span>
+    <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Key Performance Indicators</h2>
+    <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+      Real campaign benchmarks across Search and Performance marketing accounts managed in the UAE.
+    </p>
+  </div>
+
+  <!-- 3 KPI Widgets Grid: Stacked on mobile & 768-1199px, 3-column on desktop (>=1200px) -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <template x-for="(widget, idx) in widgets" :key="widget.id">
+      <div class="p-6 rounded-xl border border-white/10 bg-[#171717] flex flex-col justify-between">
+        <div>
+          <!-- Title -->
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xs font-semibold text-accent uppercase tracking-wider" x-text="widget.title"></h3>
+            <span class="text-xs text-gray-500 font-mono">5-Mo Trend</span>
+          </div>
+
+          <!-- Animated Counter: Counts from 0 -> Target when in view -->
+          <div class="text-4xl font-heading font-bold text-white mb-2">
+            <span x-text="widget.prefix"></span><span :id="'counter-' + widget.id" x-text="counters[widget.id] || 0"></span><span x-text="widget.suffix"></span>
+          </div>
+
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed" x-text="widget.context"></p>
+        </div>
+
+        <!-- Horizontal Bar Chart (Chart.js) -->
+        <div class="border-t border-white/10 pt-4">
+          <div class="text-xs text-gray-400 mb-2 font-mono flex justify-between">
+            <span>Monthly Progression</span>
+            <span class="text-accent-soft" x-text="'Target: ' + widget.prefix + widget.target + widget.suffix"></span>
+          </div>
+          <div class="h-44 w-full">
+            <canvas :id="'chart-' + widget.id"></canvas>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</section>
+
+<!-- Selected Work Section -->
+<section id="selected-work" class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <div>
+      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Client Portfolio</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-2">Selected Work</h2>
+      <p class="text-gray-300 text-sm md:text-base">Commercial clients and strategic marketing programs managed in the UAE.</p>
+    </div>
+    <a href="/portfolio/work/" class="text-accent hover:text-accent-light text-sm font-semibold flex items-center gap-1.5 touch-target">
+      View All Work &rarr;
+    </a>
+  </div>
+
+  <!-- Grid of 5 Client Tiles (3-column on >=1200px, 2-column on 768-1199px, 1-col on mobile) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+
+    
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img src="/portfolio/assets/images/ecomate-logo.svg" alt="Ecomate International LLC Logo" class="max-h-12 max-w-full object-contain" loading="lazy" width="200" height="50">
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">Ecomate International LLC</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">E-Commerce &amp; Retail</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">Technical SEO Audit &amp; Google Ads Restructuring</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/portfolio/case-studies/ecomate-international-llc/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">E-Commerce &amp; Retail</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">Ecomate International LLC</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">Technical SEO Audit &amp; Google Ads Restructuring</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img src="/portfolio/assets/images/aits-safety-logo.svg" alt="AITS Safety LLC Logo" class="max-h-12 max-w-full object-contain" loading="lazy" width="200" height="50">
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">AITS Safety LLC</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">Safety Services</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">Local SEO &amp; High-Intent B2B Search Campaigns</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/portfolio/case-studies/aits-safety-llc/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">Safety Services</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">AITS Safety LLC</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">Local SEO &amp; High-Intent B2B Search Campaigns</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img src="/portfolio/assets/images/starline-security-logo.svg" alt="Starline Security LLC Logo" class="max-h-12 max-w-full object-contain" loading="lazy" width="200" height="50">
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">Starline Security LLC</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">Security Services</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">Commercial Lead Gen &amp; CRO Landing Page Design</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/portfolio/case-studies/starline-security-llc/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">Security Services</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">Starline Security LLC</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">Commercial Lead Gen &amp; CRO Landing Page Design</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img src="/portfolio/assets/images/digitz-technologies-logo.svg" alt="Digitz Technologies LLC Logo" class="max-h-12 max-w-full object-contain" loading="lazy" width="200" height="50">
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">Digitz Technologies LLC</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">Digital Agency (UAE)</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">Full-Funnel Multi-Client Performance Marketing</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/portfolio/case-studies/digitz-technologies-llc/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">Digital Agency (UAE)</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">Digitz Technologies LLC</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">Full-Funnel Multi-Client Performance Marketing</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    
+      <div class="project-tile relative rounded-xl border border-white/10 bg-[#161616] p-6 overflow-hidden flex flex-col justify-between group">
+        <!-- Top: Logo & Title -->
+        <div>
+          <div class="h-16 flex items-center mb-4">
+            <img src="/portfolio/assets/images/dmx-logistics-logo.svg" alt="DMX Global Logistics Logo" class="max-h-12 max-w-full object-contain" loading="lazy" width="200" height="50">
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-1">DMX Global Logistics</h3>
+          <p class="text-xs text-accent-light font-medium mb-3">Freight &amp; Logistics</p>
+          <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">Cross-Border B2B Search &amp; Logistics Keyword Strategy</p>
+        </div>
+
+        <!-- Action Link -->
+        <div class="pt-6 mt-4 border-t border-white/10 flex items-center justify-between">
+          <a href="/portfolio/case-studies/dmx-global-logistics/" class="text-xs font-semibold text-accent hover:text-accent-light inline-flex items-center gap-1 touch-target">
+            Explore Case Study &rarr;
+          </a>
+          <span class="text-[11px] text-gray-500 font-mono">Case Study</span>
+        </div>
+
+        <!-- Fade-in overlay of industry + role on hover -->
+        <div class="tile-overlay absolute inset-0 bg-[#141414]/95 p-6 flex flex-col justify-between pointer-events-none">
+          <div>
+            <span class="text-xs font-semibold text-accent uppercase tracking-wider block mb-1">Freight &amp; Logistics</span>
+            <h4 class="font-heading font-bold text-lg text-white mb-2">DMX Global Logistics</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">Cross-Border B2B Search &amp; Logistics Keyword Strategy</p>
+          </div>
+          <div class="text-xs font-semibold text-accent-light flex items-center gap-1">
+            Click tile or button to view results &rarr;
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- Expertise Snapshot Section -->
+<section class="py-16 md:py-24 border-b border-white/10 reveal-on-scroll">
+  <div class="flex justify-between items-end mb-12">
+    <div>
+      <span class="text-accent text-xs font-semibold uppercase tracking-wider block mb-2">Specialization</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-2">Marketing Expertise</h2>
+      <p class="text-gray-300 text-sm md:text-base">Grouped technical marketing capabilities structured for sustainable client growth.</p>
+    </div>
+    <a href="/portfolio/expertise/" class="text-accent hover:text-accent-light text-sm font-semibold hidden md:inline-flex items-center gap-1.5 touch-target">
+      View All Skills &rarr;
+    </a>
+  </div>
+
+  <!-- 4-Column Grid on >= 1200px, 2-Column on 768-1199px, 1-Col on Mobile -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
+        🔍
+      </div>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Search Engine Optimization</h3>
+      <p class="text-xs text-gray-400 mb-3">Technical SEO, Answer Engine Optimization (AEO), Core Web Vitals, and keyword mapping.</p>
+      <a href="/portfolio/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore SEO sub-skills &rarr;</a>
+    </div>
+
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
+        📈
+      </div>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Performance Marketing</h3>
+      <p class="text-xs text-gray-400 mb-3">Google Ads (Search & PMax), Meta lead gen, Quality Score optimization, and negative match tuning.</p>
+      <a href="/portfolio/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Paid Media &rarr;</a>
+    </div>
+
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
+        📊
+      </div>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Analytics & Attribution</h3>
+      <p class="text-xs text-gray-400 mb-3">GA4 custom events, GTM containers, Meta Pixel / CAPI setup, and executive reporting.</p>
+      <a href="/portfolio/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Analytics &rarr;</a>
+    </div>
+
+    <div class="p-6 rounded-xl bg-[#161616] border border-white/10">
+      <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold mb-4">
+        ⚡
+      </div>
+      <h3 class="font-heading font-bold text-lg text-white mb-2">Website Optimization</h3>
+      <p class="text-xs text-gray-400 mb-3">WordPress, Elementor, Astra, HTML/CSS/JS, speed performance, and mobile CRO.</p>
+      <a href="/portfolio/expertise/" class="text-xs font-semibold text-accent hover:underline">Explore Web Skills &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Freelance Collaboration Callout -->
+<section class="py-16 md:py-20 text-center reveal-on-scroll">
+  <div class="max-w-2xl mx-auto p-10 rounded-2xl border border-white/10 bg-[#161616]">
+    <h2 class="font-heading text-3xl font-bold text-white mb-3">Looking for a Freelance Marketing Specialist?</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+      Whether you need an in-depth technical SEO audit, paid media restructuring to stop ad budget leakage, or full-funnel campaign execution, I'm currently accepting select freelance clients.
+    </p>
+    <a href="/portfolio/contact/" class="touch-target inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-accent/20 transition-all duration-200">
+      Initiate Freelance Project Inquiry
+    </a>
+  </div>
+</section>
+
+<!-- KPI Animated Counter & Chart.js Implementation -->
+<script>
+function kpiWidgetTracker() {
+  return {
+    widgets: [],
+    counters: {},
+    chartsLoaded: false,
+    async init() {
+      try {
+        let res;
+        try {
+          res = await fetch('/portfolio/data/kpis.json');
+          if (!res.ok) throw new Error();
+        } catch (_) {
+          res = await fetch('/data/kpis.json');
+        }
+        this.widgets = await res.json();
+        
+        // Initialize counter states at 0
+        this.widgets.forEach(w => {
+          this.counters[w.id] = 0;
+        });
+
+        // Set up IntersectionObserver to trigger counting & chart filling on scroll
+        this.$nextTick(() => {
+          this.setupScrollTrigger();
+        });
+      } catch (err) {
+        console.error("Failed to fetch KPI data:", err);
+      }
+    },
+
+    setupScrollTrigger() {
+      const section = document.getElementById('kpi-widgets');
+      if (!section) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !this.chartsLoaded) {
+            this.chartsLoaded = true;
+            this.animateCounters();
+            this.renderHorizontalBarCharts();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(section);
+    },
+
+    animateCounters() {
+      const duration = 1800; // 1.8 seconds
+      const steps = 60;
+      const intervalTime = duration / steps;
+
+      this.widgets.forEach(w => {
+        const target = w.target;
+        const isDecimal = !!w.isDecimal;
+        let currentStep = 0;
+
+        const timer = setInterval(() => {
+          currentStep++;
+          const progress = currentStep / steps;
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = target * easeOut;
+
+          this.counters[w.id] = isDecimal ? currentVal.toFixed(2) : Math.round(currentVal);
+
+          if (currentStep >= steps) {
+            this.counters[w.id] = isDecimal ? target.toFixed(2) : target;
+            clearInterval(timer);
+          }
+        }, intervalTime);
+      });
+    },
+
+    renderHorizontalBarCharts() {
+      this.widgets.forEach(w => {
+        const canvasId = 'chart-' + w.id;
+        const ctx = document.getElementById(canvasId);
+        if (!ctx) return;
+
+        // Chart.js Horizontal Bar Chart (indexAxis: 'y')
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: w.labels,
+            datasets: [{
+              label: w.title,
+              data: w.values,
+              backgroundColor: '#0FA9E6',
+              hoverBackgroundColor: '#7FD6FF',
+              borderRadius: 4,
+              borderSkipped: false,
+              barThickness: 12
+            }]
+          },
+          options: {
+            indexAxis: 'y', // Required: Horizontal bar chart
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: {
+              duration: 1600,
+              easing: 'easeOutQuart'
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: '#141414',
+                borderColor: 'rgba(255,255,255,0.2)',
+                borderWidth: 1,
+                titleColor: '#FFFFFF',
+                bodyColor: '#7FD6FF',
+                titleFont: { family: 'Inter', size: 12, weight: '600' },
+                bodyFont: { family: 'Inter', size: 12 },
+                callbacks: {
+                  label: function(context) {
+                    return `${w.prefix || ''}${context.parsed.x}${w.suffix || ''}`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { color: 'rgba(255,255,255,0.06)' },
+                ticks: {
+                  color: '#9CA3AF',
+                  font: { family: 'Inter', size: 10 }
+                }
+              },
+              y: {
+                grid: { display: false },
+                ticks: {
+                  color: '#D1D5DB',
+                  font: { family: 'Inter', size: 11, weight: '500' }
+                }
+              }
+            }
+          }
+        });
+      });
+    }
+  };
+}
+</script>
+
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#141414] py-12 mt-auto text-gray-400">
+  <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8 pb-8 border-b border-white/10">
+      <div>
+        <h2 class="font-heading font-bold text-2xl text-white">Jayaraj T</h2>
+        <p class="text-sm text-gray-400 mt-1">Digital Marketer • Calicut, Kerala & UAE</p>
+        <p class="text-xs text-accent mt-1 italic font-heading">“Somehow, This Is My Profession.”</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="/portfolio/contact/" class="touch-target px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-colors">
+          Discuss a Freelance Project
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div class="flex items-center space-x-6">
+        <a href="https://linkedin.com/in/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/jayaraj" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors flex items-center gap-1.5 touch-target">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          Twitter / X
+        </a>
+        <a href="mailto:jayaraj@example.com" class="hover:text-accent transition-colors touch-target">
+          jayaraj@example.com
+        </a>
+      </div>
+
+      <div>
+        © 2026 Jayaraj T. Built with Eleventy & Tailwind CSS.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Section Reveal Scroll Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, index * 100);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
